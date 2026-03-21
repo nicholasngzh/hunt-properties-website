@@ -41,8 +41,8 @@ export default function Hero() {
             <Image
               src="/hunt-properties-website/hunt_properties_logo.jpeg"
               alt="Hunt Property Management Sdn Bhd"
-              width={200}
-              height={74}
+              width={120}
+              height={44}
               className="object-contain"
               priority
             />
