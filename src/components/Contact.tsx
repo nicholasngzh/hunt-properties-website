@@ -21,7 +21,7 @@ const CONTACT_DETAILS = [
       </svg>
     ),
     label: 'Phone',
-    value: '+60 3-XXXX XXXX',
+    value: '+60 3-4XXX XXXX',
   },
   {
     icon: (
