@@ -12,7 +12,7 @@ const CONTACT_DETAILS = [
       </svg>
     ),
     label: 'Address',
-    value: 'No. 1, Jalan Contoh, Taman Contoh, 50000 Kuala Lumpur, Malaysia',
+    value: 'Ground Floor, Menara K1, Off Jalan Kelang Lama, Kuala Lumpur, Malaysia',
   },
   {
     icon: (
@@ -21,7 +21,7 @@ const CONTACT_DETAILS = [
       </svg>
     ),
     label: 'Phone',
-    value: '+60 3-XXXX XXXX',
+    value: '+6012-5530 020',
   },
   {
     icon: (
@@ -30,7 +30,7 @@ const CONTACT_DETAILS = [
       </svg>
     ),
     label: 'Email',
-    value: 'info@huntproperty.com.my',
+    value: 'admin@huntproperty.com.my',
   },
   {
     icon: (
@@ -39,7 +39,7 @@ const CONTACT_DETAILS = [
       </svg>
     ),
     label: 'Office Hours',
-    value: 'Monday – Friday: 9:00 AM – 6:00 PM',
+    value: 'Monday – Friday: 9:00 AM – 5.30 PM',
   },
 ]
 
