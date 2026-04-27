@@ -2,9 +2,9 @@ import ScrollReveal from './ScrollReveal'
 
 const STATS = [
   { value: '20+', label: 'Years of Experience', suffix: '' },
-  { value: '40+', label: 'Professional Staff', suffix: '' },
-  { value: '5', label: 'Core Departments', suffix: '' },
-  { value: '9', label: 'Projects Managed', suffix: '' },
+  { value: '80+', label: 'Professional Staff', suffix: '' },
+  { value: '6', label: 'Core Departments', suffix: '' },
+  { value: '22', label: 'Projects Managed', suffix: '' },
 ]
 
 const DEPARTMENTS = [
@@ -52,27 +52,18 @@ export default function About() {
           <div>
             <ScrollReveal>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Hunt Property Management Sdn Bhd is a professional property management enterprise
-                with a <strong className="text-primary">National Class II qualification</strong>,
-                specialising in property management and related services. Officially established on{' '}
-                <strong className="text-primary">2 September 2004</strong> with a registered capital
-                of RMB 5 million, we employ more than 40 professional technical and management
+                Hunt Property Management Sdn Bhd is a professional property management firm
+                with 4 distinct licenses issued by the Ministry of Finance,specialising in property management 
+                and related services. Officially established on{' '}
+                <strong className="text-primary">2010</strong> with a registered capital
+                of RM300,000, we employ more than 80 professional technical and management
                 personnel.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={1}>
               <p className="text-gray-600 leading-relaxed mb-5">
                 We are supported by a highly experienced and forward-thinking professional
-                management team. Our core members comprise senior property management specialists
-                from major cities such as Yiwu, Hangzhou, Shenzhen, and Guangzhou.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={2}>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                The Company is in the process of fully implementing the{' '}
-                <strong className="text-primary">ISO 9001:2000</strong> International Quality
-                Management System, with the ISO 14000 Environmental Management System and OHSMS
-                18000 Occupational Health and Safety Management System to follow.
+                management team. Our core members comprise senior property management specialists.
               </p>
             </ScrollReveal>
 
