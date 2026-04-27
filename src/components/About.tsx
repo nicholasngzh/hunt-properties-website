@@ -12,19 +12,20 @@ const DEPARTMENTS = [
   'Property Management Department',
   'Business Development Department',
   'Quality Management Department',
-  'Finance Department',
+  'Account & Finance Department',
+  'Human Resource Department',
 ]
 
 const PROJECTS = [
-  'Danxi Third District · Times Garden',
-  'Sunshine Metropolis',
-  'Oriental Star International Residence',
-  'Jincheng Golf International Apartments',
-  'Yile New Village',
-  'Shuanglin Yiyuan',
-  'Wending Apartment',
-  'Chunhan Apartment',
-  'Jinglong Kitchenware City',
+  'Isola @ KLCC',
+  'Scenaria @ North KL',
+  'Menara K1 @ Old KLang Road',
+  '10 Boulevard @ Damansara Jaya',
+  'The Mate @ Damansara',
+  'Ken Damansara @ SS2',
+  'Yolo Signature Suite @ Bandar Sunway',
+  '8 Kinrara @ Bandar Kinrara',
+  'Palmiera @ Bandar Kinrara',
 ]
 
 export default function About() {
