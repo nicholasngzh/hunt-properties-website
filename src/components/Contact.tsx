@@ -30,7 +30,7 @@ const CONTACT_DETAILS = [
       </svg>
     ),
     label: 'Email',
-    value: 'admin@huntproperty.com.my',
+    value: 'admin@huntpropkl.com.my',
   },
   {
     icon: (
