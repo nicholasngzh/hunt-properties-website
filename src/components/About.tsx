@@ -54,8 +54,7 @@ export default function About() {
               <p className="text-gray-600 leading-relaxed mb-5">
                 Hunt Property Management Sdn Bhd is a professional property management firm
                 with 4 distinct licenses issued by the Ministry of Finance,specialising in property management 
-                and related services. Officially established on{' '}
-                <strong className="text-primary">2010</strong> with a registered capital
+                and related services. Officially established on 2010 with a registered capital
                 of RM300,000, we employ more than 80 professional technical and management
                 personnel.
               </p>
