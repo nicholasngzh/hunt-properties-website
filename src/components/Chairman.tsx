@@ -56,7 +56,7 @@ export default function Chairman() {
               <p className="text-sm text-gray-500 mt-1">Hunt Property Management Sdn Bhd</p>
               <div className="mt-4 flex items-center gap-2 justify-center lg:justify-start">
                 <div className="w-6 h-px bg-gold" />
-                <p className="text-xs text-gold tracking-wider uppercase font-medium">Est. 2004</p>
+                <p className="text-xs text-gold tracking-wider uppercase font-medium">Est. 2010</p>
               </div>
             </div>
 
