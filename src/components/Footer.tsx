@@ -26,8 +26,7 @@ export default function Footer() {
               />
             </a>
             <p className="text-white/60 text-sm leading-relaxed mt-2">
-              A professional property management enterprise with a National Class II qualification,
-              dedicated to serving property owners and communities since 2004.
+              We serve with pride and dedication
             </p>
           </div>
 
@@ -76,10 +75,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-xs text-center sm:text-left">
-            © 2004–{new Date().getFullYear()} Hunt Property Management Sdn Bhd. All rights reserved.
+            2010–{new Date().getFullYear()} Hunt Property Management Sdn Bhd. All rights reserved.
           </p>
           <p className="text-white/30 text-xs">
-            National Class II Property Management Enterprise
+            Registered with Board of Valuers, Appraisers, Estate Agents and Property Managers (BOVEAP) Malaysia
           </p>
         </div>
       </div>
