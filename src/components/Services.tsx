@@ -20,7 +20,7 @@ interface Service {
 const SERVICES: Service[] = [
   {
     id: 'engineering',
-    title: 'Engineering Services',
+    title: 'Engineering & Facilities Management',
     summary:
       'End-to-end management of building systems and facilities, ensuring safety, efficiency, and long-term asset value.',
     commitment: 'Systematic Management · Energy Efficiency · Operational Reliability · Asset Value Enhancement',
