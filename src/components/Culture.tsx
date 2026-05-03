@@ -122,8 +122,8 @@ export default function Culture() {
             <div className="h-px w-12 bg-gold/40" />
           </div>
           <p className="text-gray-500 mt-6 max-w-xl mx-auto text-sm leading-relaxed">
-            The values, beliefs, and principles that guide every decision and action at Hunt
-            Property Management Sdn Bhd.
+            The values, beliefs, and principles that guide every decision and action at
+            Hunt Property Management Sdn Bhd.
           </p>
         </ScrollReveal>
 
