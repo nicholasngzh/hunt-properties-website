@@ -19,7 +19,7 @@ export default function Chairman() {
             Leadership
           </p>
           <h2 className="font-serif text-4xl sm:text-5xl text-primary font-bold mb-4">
-            Chairman&apos;s Message
+            Managing Director&apos;s Message
           </h2>
           <div className="flex items-center justify-center gap-3">
             <div className="h-px w-12 bg-gold/40" />
