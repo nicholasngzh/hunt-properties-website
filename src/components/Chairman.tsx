@@ -52,7 +52,7 @@ export default function Chairman() {
 
             {/* Name & title */}
             <div className="text-center lg:text-left">
-              <p className="font-serif text-xl font-semibold text-primary">The Chairman</p>
+              <p className="font-serif text-xl font-semibold text-primary">Managing Director</p>
               <p className="text-sm text-gray-500 mt-1">Hunt Property Management Sdn Bhd</p>
               <div className="mt-4 flex items-center gap-2 justify-center lg:justify-start">
                 <div className="w-6 h-px bg-gold" />
