@@ -2,16 +2,28 @@ import ScrollReveal from './ScrollReveal'
 
 const TESTIMONIALS = [
   {
-    quote: 'Hunt Property Management has consistently exceeded our expectations. Their professionalism and attention to detail make them the best in the industry.',
-    author: 'Resident, Isola @ KLCC',
+    quote: 'We considered ourselves lucky to have appointed Hunt Property Management Sdn. Bhd. Although it has only been 8 months since the appointment, your Company had managed to stabilize the building by catching up with operational and administrative backlogs built over the last few years. We agreed that this was the best decision the JMB had ever made.',
+    author: 'Yap Sook Har, Chairlady — JMB Eight Kinrara Serviced Apartment',
   },
   {
-    quote: 'The team is responsive, knowledgeable, and truly cares about the community. We have seen significant improvements since they took over management.',
-    author: 'JMB Committee, Scenaria @ North KL',
+    quote: 'No words can replace our appreciation towards your esteemed company and we can never say thank you enough. We look forward to continuing the relationship for many years.',
+    author: 'Siti Badriah Binti Ishak, Chairlady — Badan Pengurusan Bersama Menara U',
   },
   {
-    quote: 'Transparent financial reporting and proactive maintenance have made a world of difference for our property. Highly recommended.',
-    author: 'Property Owner, Ken Damansara @ SS2',
+    quote: 'Hunt Property Management implemented various systems and procedures in the areas of organizational structure, financial management, and overall operations management. We would certainly recommend their service to any Joint Management Body or Management Corporation.',
+    author: 'Vivian Tan Nai Huang, Chairlady — 10 Boulevard Management Corporation',
+  },
+  {
+    quote: 'The professionalism and sincerity exhibited by your team is commendable and deserves appreciation. We wish that our association will go a long way creating pillars of success.',
+    author: 'Roberto Gerardo Calleja, Chairman — Icon Residence Mont\' Kiara',
+  },
+  {
+    quote: 'I would like to thank you for your professional and impeccable service since taking over. I am most impressed at how you managed to solve the underground major pipe burst problem within 2 months — an issue ongoing for the last 4 years with no resolution.',
+    author: 'Dr Patrick Gurubatham, Council Member — The Villa @ Serai Saujana',
+  },
+  {
+    quote: 'We truly appreciate the time and the effort spent in maintaining the building since year 2016. We acknowledge and appreciate your services and look forward to a continuous working relationship. We would like to include Hunt Property Management Sdn Bhd as our panel service provider in all our upcoming developments.',
+    author: 'Kevin Ong, Director — OCR Land Holdings Sdn Bhd (Wisma PJ5 Soho)',
   },
 ]
 
@@ -51,7 +63,7 @@ export default function Testimonials() {
         </ScrollReveal>
 
         {/* Testimonial cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {TESTIMONIALS.map((t, i) => (
             <ScrollReveal key={i} delay={(Math.min(i, 4) as 0 | 1 | 2 | 3 | 4)}>
               <div className="bg-white/5 border border-white/10 rounded-sm p-8 flex flex-col gap-6 hover:border-gold/40 hover:bg-white/10 transition-all duration-300 h-full">
@@ -73,10 +85,12 @@ export default function Testimonials() {
         {/* CTA to view more */}
         <ScrollReveal className="text-center">
           <a
-            href="#contact"
+            href="https://1drv.ms/f/c/8bf50eb0acba6e91/IgDuQ4rm0AyCR5Lh0GDUkXnuAZQNxHqxTTS_Do0h0FWxsCs?e=RFrVKt"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 border border-gold/50 hover:border-gold text-gold hover:text-gold-light text-sm font-semibold px-8 py-3.5 rounded-sm transition-all duration-200 tracking-wide hover:-translate-y-0.5"
           >
-            Share Your Experience
+            View All Letters of Appreciation
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
