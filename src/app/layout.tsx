@@ -15,6 +15,10 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: 'Hunt Property Management Sdn Bhd',
+  icons: {
+    icon: '/hunt-properties-website/hunt_properties_logo.jpeg',
+    apple: '/hunt-properties-website/hunt_properties_logo.jpeg',
+  },
   description:
     'Professional property management services in Malaysia. Specialising in strata communities, commercial properties, and mixed developments. Delivering heartfelt service, every day.',
   keywords: [
