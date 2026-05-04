@@ -1,6 +1,3 @@
-'use client'
-
-import { useState } from 'react'
 import ScrollReveal from './ScrollReveal'
 
 const CONTACT_DETAILS = [
@@ -44,46 +41,6 @@ const CONTACT_DETAILS = [
 ]
 
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  })
-  const [submitted, setSubmitted] = useState(false)
-  const [errors, setErrors] = useState<Partial<typeof form>>({})
-
-  const validate = () => {
-    const newErrors: Partial<typeof form> = {}
-    if (!form.name.trim()) newErrors.name = 'Name is required'
-    if (!form.email.trim()) newErrors.email = 'Email is required'
-    else if (!/\S+@\S+\.\S+/.test(form.email)) newErrors.email = 'Enter a valid email'
-    if (!form.message.trim()) newErrors.message = 'Message is required'
-    return newErrors
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    const newErrors = validate()
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors)
-      return
-    }
-    setErrors({})
-    setSubmitted(true)
-    setForm({ name: '', email: '', phone: '', subject: '', message: '' })
-    setTimeout(() => setSubmitted(false), 6000)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setForm((prev) => ({ ...prev, [name]: value }))
-    if (errors[name as keyof typeof form]) {
-      setErrors((prev) => ({ ...prev, [name]: undefined }))
-    }
-  }
-
   return (
     <section id="contact" className="py-24 bg-primary relative overflow-hidden">
       {/* Background pattern */}
@@ -119,163 +76,32 @@ export default function Contact() {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact details */}
-          <ScrollReveal>
-            <div className="space-y-6">
-              <h3 className="font-serif text-2xl text-gold font-semibold mb-8">
-                Our Office
-              </h3>
-              {CONTACT_DETAILS.map(({ icon, label, value }) => (
-                <div key={label} className="flex items-start gap-4 group">
-                  <div className="w-10 h-10 rounded-sm bg-white/10 flex items-center justify-center text-gold shrink-0 group-hover:bg-gold group-hover:text-primary transition-colors duration-300">
-                    {icon}
-                  </div>
-                  <div>
-                    <p className="text-white/50 text-xs uppercase tracking-widest mb-1">{label}</p>
-                    <p className="text-white text-sm leading-relaxed">{value}</p>
-                  </div>
+        {/* Contact details */}
+        <ScrollReveal className="max-w-lg mx-auto">
+          <div className="space-y-6">
+            <h3 className="font-serif text-2xl text-gold font-semibold mb-8">
+              Our Office
+            </h3>
+            {CONTACT_DETAILS.map(({ icon, label, value }) => (
+              <div key={label} className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-sm bg-white/10 flex items-center justify-center text-gold shrink-0 group-hover:bg-gold group-hover:text-primary transition-colors duration-300">
+                  {icon}
                 </div>
-              ))}
-
-              {/* Decorative divider */}
-              <div className="flex items-center gap-4 pt-4">
-                <div className="h-px flex-1 bg-white/10" />
-                <div className="w-1.5 h-1.5 rotate-45 bg-gold" />
-                <div className="h-px flex-1 bg-white/10" />
-              </div>
-
-              <p className="font-serif italic text-gold-light text-sm">
-                "Delivering Heartfelt Service, Every Day"
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Contact form */}
-          <ScrollReveal delay={1}>
-            <div className="bg-white/5 border border-white/10 rounded-sm p-8">
-              <h3 className="font-serif text-xl text-white font-semibold mb-6">
-                Send Us a Message
-              </h3>
-
-              {/* Success message */}
-              {submitted && (
-                <div className="mb-6 bg-gold/20 border border-gold/40 rounded-sm p-4 flex items-center gap-3">
-                  <svg className="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <p className="text-gold text-sm font-medium">
-                    Thank you! Your message has been received. We'll get back to you shortly.
-                  </p>
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} noValidate className="space-y-4">
-                {/* Name + Email row */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-white/60 text-xs uppercase tracking-widest mb-1.5" htmlFor="name">
-                      Full Name <span className="text-gold">*</span>
-                    </label>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      value={form.name}
-                      onChange={handleChange}
-                      placeholder="Your name"
-                      className={`w-full bg-white/5 border rounded-sm px-4 py-2.5 text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold transition-colors ${
-                        errors.name ? 'border-red-400/60' : 'border-white/20'
-                      }`}
-                    />
-                    {errors.name && <p className="mt-1 text-red-400 text-xs">{errors.name}</p>}
-                  </div>
-                  <div>
-                    <label className="block text-white/60 text-xs uppercase tracking-widest mb-1.5" htmlFor="email">
-                      Email <span className="text-gold">*</span>
-                    </label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={form.email}
-                      onChange={handleChange}
-                      placeholder="you@email.com"
-                      className={`w-full bg-white/5 border rounded-sm px-4 py-2.5 text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold transition-colors ${
-                        errors.email ? 'border-red-400/60' : 'border-white/20'
-                      }`}
-                    />
-                    {errors.email && <p className="mt-1 text-red-400 text-xs">{errors.email}</p>}
-                  </div>
-                </div>
-
-                {/* Phone + Subject row */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-white/60 text-xs uppercase tracking-widest mb-1.5" htmlFor="phone">
-                      Phone
-                    </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={form.phone}
-                      onChange={handleChange}
-                      placeholder="+60 12-XXX XXXX"
-                      className="w-full bg-white/5 border border-white/20 rounded-sm px-4 py-2.5 text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white/60 text-xs uppercase tracking-widest mb-1.5" htmlFor="subject">
-                      Enquiry Type
-                    </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      value={form.subject}
-                      onChange={handleChange}
-                      className="w-full bg-white/5 border border-white/20 rounded-sm px-4 py-2.5 text-white text-sm focus:outline-none focus:border-gold transition-colors appearance-none"
-                    >
-                      <option value="" className="text-gray-800">Select a topic</option>
-                      <option value="engineering" className="text-gray-800">Engineering Services</option>
-                      <option value="security" className="text-gray-800">Security Management</option>
-                      <option value="landscaping" className="text-gray-800">Landscaping Services</option>
-                      <option value="general" className="text-gray-800">General Enquiry</option>
-                      <option value="careers" className="text-gray-800">Careers</option>
-                    </select>
-                  </div>
-                </div>
-
-                {/* Message */}
                 <div>
-                  <label className="block text-white/60 text-xs uppercase tracking-widest mb-1.5" htmlFor="message">
-                    Message <span className="text-gold">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="Tell us about your property management needs..."
-                    className={`w-full bg-white/5 border rounded-sm px-4 py-2.5 text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold transition-colors resize-none ${
-                      errors.message ? 'border-red-400/60' : 'border-white/20'
-                    }`}
-                  />
-                  {errors.message && <p className="mt-1 text-red-400 text-xs">{errors.message}</p>}
+                  <p className="text-white/50 text-xs uppercase tracking-widest mb-1">{label}</p>
+                  <p className="text-white text-sm leading-relaxed">{value}</p>
                 </div>
+              </div>
+            ))}
 
-                {/* Submit */}
-                <button
-                  type="submit"
-                  className="w-full bg-gold hover:bg-gold-light text-primary font-semibold text-sm py-3 rounded-sm transition-all duration-200 tracking-wide hover:shadow-lg hover:-translate-y-0.5"
-                >
-                  Send Message
-                </button>
-              </form>
+            {/* Decorative divider */}
+            <div className="flex items-center gap-4 pt-4">
+              <div className="h-px flex-1 bg-white/10" />
+              <div className="w-1.5 h-1.5 rotate-45 bg-gold" />
+              <div className="h-px flex-1 bg-white/10" />
             </div>
-          </ScrollReveal>
-        </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )
