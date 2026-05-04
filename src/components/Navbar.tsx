@@ -8,7 +8,11 @@ const NAV_LINKS = [
   { href: '#about', label: 'About' },
   { href: '#chairman', label: "Chairman's Message" },
   { href: '#culture', label: 'Our Culture' },
+  { href: '#people', label: 'Our People' },
   { href: '#services', label: 'Services' },
+  { href: '#licenses', label: 'Licenses' },
+  { href: '#testimonials', label: 'Testimonials' },
+  { href: '#careers', label: 'Careers' },
   { href: '#contact', label: 'Contact' },
 ]
 

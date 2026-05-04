@@ -8,9 +8,9 @@ const MESSAGE_PARAGRAPHS = [
   `Looking ahead, Hunt Property Management Sdn Bhd will continue to strengthen its professional capabilities, embrace innovation, and enhance service standards to meet the rising expectations of the market. By growing together with our employees, clients, and communities, we are committed to delivering sustainable value and shaping better living and working environments for the future.`,
 ]
 
-export default function Managing Director() {
+export default function Chairman() {
   return (
-    <section id="managing director" className="py-24 bg-off-white">
+    <section id="chairman" className="py-24 bg-off-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <ScrollReveal className="text-center mb-16">

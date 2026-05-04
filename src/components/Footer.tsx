@@ -3,9 +3,11 @@ import Image from 'next/image'
 const NAV_LINKS = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
-  { href: '#chairman', label: "Chairman's Message" },
-  { href: '#culture', label: 'Our Culture' },
+  { href: '#people', label: 'Our People' },
   { href: '#services', label: 'Services' },
+  { href: '#licenses', label: 'Licenses & Insurance' },
+  { href: '#testimonials', label: 'Testimonials' },
+  { href: '#careers', label: 'Careers' },
   { href: '#contact', label: 'Contact' },
 ]
 
