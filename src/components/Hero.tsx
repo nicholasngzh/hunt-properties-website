@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Eyebrow */}
         <p className="text-gold-light text-xs sm:text-sm tracking-[0.3em] uppercase font-medium mb-6">
-          Est. 2004 &nbsp;·&nbsp; Malaysia
+          Est. 2010 &nbsp;·&nbsp; Malaysia
         </p>
 
         {/* Gold decorative line */}

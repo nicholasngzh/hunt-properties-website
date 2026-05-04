@@ -28,6 +28,23 @@ const PROJECTS = [
   'Palmiera @ Bandar Kinrara',
 ]
 
+const FOCUSED_AREAS = [
+  {
+    region: 'Kuala Lumpur',
+    locations: [
+      'KL City Center', 'Bangsar', 'Mont Kiara', 'Dutamas', 'KL Sentral',
+      'Segambut', 'Kepong', 'Desapark', 'Bandar Sri Damansara', 'Old Klang Road',
+    ],
+  },
+  {
+    region: 'Selangor',
+    locations: [
+      'Petaling Jaya', 'SS2', 'Damansara', 'Kelana Jaya', 'Subang Jaya',
+      'Sunway', 'Puchong', 'Subang', 'Shah Alam', 'Kemuning', 'Cyberjaya', 'Putrajaya',
+    ],
+  },
+]
+
 export default function About() {
   return (
     <section id="about" className="py-24 bg-white">
@@ -130,6 +147,30 @@ export default function About() {
                   >
                     {project}
                   </span>
+                ))}
+              </div>
+            </ScrollReveal>
+
+            {/* Focused Areas */}
+            <ScrollReveal delay={2}>
+              <h3 className="font-serif text-lg font-semibold text-primary mb-4 mt-8">
+                Focused Areas
+              </h3>
+              <div className="space-y-4">
+                {FOCUSED_AREAS.map((area) => (
+                  <div key={area.region}>
+                    <p className="text-xs font-semibold text-gold uppercase tracking-widest mb-2">{area.region}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {area.locations.map((loc) => (
+                        <span
+                          key={loc}
+                          className="inline-flex items-center px-3 py-1.5 text-xs font-medium border border-primary/20 text-primary/80 rounded-sm hover:border-gold hover:text-gold bg-white hover:bg-off-white transition-all duration-200 cursor-default"
+                        >
+                          {loc}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </ScrollReveal>
