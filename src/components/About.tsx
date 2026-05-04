@@ -86,7 +86,7 @@ export default function About() {
             {/* Departments */}
             <ScrollReveal delay={3}>
               <h3 className="font-serif text-lg font-semibold text-primary mb-4">
-                Our Five Departments
+                Our Six Departments
               </h3>
               <ul className="space-y-2">
                 {DEPARTMENTS.map((dept) => (
